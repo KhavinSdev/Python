@@ -73,7 +73,7 @@ def ocdmonitor():
         if quit == True:
             exit()
         if key_count == 5:
-            print('Stop doing that, it is not you but the disease')
+            print('Stop doing that, You know it is not you who wants to do it but the disease. Remember. You are in charge!')
             playsound.playsound('mo.mp3')
             key_count = 0
             print(quit)
