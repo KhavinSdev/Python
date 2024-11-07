@@ -24,9 +24,7 @@ def SortFilesavKeyword(source, destination):
         os.mkdir(destination + '\\' + 'audi')
         os.mkdir(destination + '\\' + 'WordDocz')
         os.mkdir(destination + '\\' + 'Pythonscript')
-    finally:
-
-    
+    finally:    
         filetype = input("Choose a file type( pyfile, pdf, video, image, audio, worddoc): ") 
         search = input('Type a search key or phrase(please use lower cased letters) or leave blank for all files: ')
         if search == '':
