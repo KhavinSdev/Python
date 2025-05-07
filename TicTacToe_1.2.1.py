@@ -38,16 +38,20 @@ def XO():
                 print("That place is filled, please make another move")
                 continue
             else:
-                (x,y) = usr
-                if int(x) == 1:
-                    r1[int(y) - 1] = 'X'
-                elif int(x) == 2:
-                    r2[int(y) - 1] = 'X'
-                elif int(x) == 3:
-                    r3[int(y) - 1] = 'X'
-            
-                moves_played.append(usr)
-            
+                try:
+                    (x,y) = usr
+                    if int(x) == 1:
+                        r1[int(y) - 1] = 'X'
+                    elif int(x) == 2:
+                        r2[int(y) - 1] = 'X'
+                    elif int(x) == 3:
+                        r3[int(y) - 1] = 'X'
+                
+                    moves_played.append(usr)
+                except:
+                    print("That was an invalid move, please try again")
+                    continue
+
             display(r1,r2,r3)
             print()
         
@@ -60,6 +64,7 @@ def XO():
             if r1[0] == r2[1] == r3[2] == 'X' or r1[2] == r2[1] == r3[0] == 'X':
                 print('You win ' + name1)
                 break
+    
     
             turn = 2
 
@@ -82,15 +87,19 @@ def XO():
                 print("That place is filled, please make another move")
                 continue
             else:
-                (x,y) = usr
-                if int(x) == 1:
-                    r1[int(y) - 1] = 'O'
-                elif int(x) == 2:
-                    r2[int(y) - 1] = 'O'
-                elif int(x) == 3:
-                    r3[int(y) - 1] = 'O'
-            
-                moves_played.append(usr)
+                try:
+                    (x,y) = usr
+                    if int(x) == 1:
+                        r1[int(y) - 1] = 'O'
+                    elif int(x) == 2:
+                        r2[int(y) - 1] = 'O'
+                    elif int(x) == 3:
+                        r3[int(y) - 1] = 'O'
+                
+                    moves_played.append(usr)
+                except:
+                    print("That was an invalid format for a move, please try again")
+                    continue
             
             display(r1,r2,r3)
             print()
@@ -109,6 +118,7 @@ def XO():
         
             if input('Do you want to end the game (y/n) ') == 'y':
                 GEnd = True
+                
                 
 
         
