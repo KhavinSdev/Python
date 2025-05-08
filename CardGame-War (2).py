@@ -233,6 +233,7 @@ print()
 
 print()
 print("Thanks for Playing... even though you didn't reall do anything :)")
+time.sleep(10)
 
  
 
