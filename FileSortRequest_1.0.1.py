@@ -21,11 +21,11 @@ def SortFilesavKeyword(source, destination):
         os.mkdir(destination + '\\' + 'PDF')
         os.mkdir(destination + '\\' + 'videos')
         os.mkdir(destination + '\\' + 'images')
-        os.mkdir(destination + '\\' + 'audi')
-        os.mkdir(destination + '\\' + 'WordDocz')
-        os.mkdir(destination + '\\' + 'Pythonscript')
+        os.mkdir(destination + '\\' + 'audio')
+        os.mkdir(destination + '\\' + 'WordDocs')
+        os.mkdir(destination + '\\' + 'Pythonscripts')
     finally:    
-        filetype = input("Choose a file type( pyfile, pdf, video, image, audio, worddoc): ") 
+        filetype = input("Choose a file type( python, pdf, video, image, audio, docx): ") 
         search = input('Type a search key or phrase(please use lower cased letters) or leave blank for all files: ')
         if search == '':
             search = '.'
@@ -34,9 +34,9 @@ def SortFilesavKeyword(source, destination):
             'pdf' : "PDF",
             'video': "videos",
             'image': "images",
-            'audio': "audi",
-            'worddoc': "WordDocz",
-            'pyfile' : "Pythonscript"
+            'audio': "audio",
+            'docx': "WordDocs",
+            'python' : "PythonScripts"
         }
         
         filetoextension = {
@@ -44,8 +44,8 @@ def SortFilesavKeyword(source, destination):
             'video' : ['.mp4', '.MPEG-4', '.mov'],
             'image' : ['.jpg', '.jpeg', '.png'],
             'audio': ['.mp3', '.wav'],
-            'worddoc': '.docx',
-            'pyfile' : '.py'
+            'docx': '.docx',
+            'python' : '.py'
         }
         
         #print(filetoextension[filetype])
