@@ -229,8 +229,10 @@ while Game_On:
 
 
 
+print()
 
-
+print()
+print("Thanks for Playing... even though you didn't reall do anything :)")
 
  
 
